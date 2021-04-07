@@ -5,7 +5,7 @@ draft: false
 author: "Akash Mishra"
 ---
 
-Writing a "Hello World" program is a time-honored tradition in computer programming. Its usually the first program that people are taught to write when learning a new programming language.
+Writing a "Hello World!" program is a time-honored tradition in computer programming. Its usually the first program that people are taught to write when learning a new programming language.
 
 The page that we see right now taught me the following things:
 
