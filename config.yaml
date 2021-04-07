@@ -1,0 +1,20 @@
+baseURL: "http://tucosaurus.com/"
+languageCode: "en-us"
+title: "tucosaurus's alcove"
+theme: "hugo-tania"
+
+params:
+  socialOptions:
+    github: "https://github.com/tucosaurus"
+    twitter: "https://twitter.com/tucosaurus"
+    linkedin: "https://www.linkedin.com/in/tucosaurus/"
+
+menu:
+  header:
+    - name: Archives
+      url: "/archives/"
+    # - name: About
+    #   url: "/about/"
+  footer:
+    - name: RSS
+      url: "/index.xml"
