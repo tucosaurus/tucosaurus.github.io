@@ -5,10 +5,7 @@
 </header>
 {{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
 
-{{ range .Pages.GroupByDate "2006" }}
-<section class="year">
-  <h2 class="label">{{ .Key }}</h2>
-  {{ partial "post-list.html" .Pages }}
-</section>
-{{ end }}
+<nav class="archive">
+  {{ partial "archive.html" (dict "pages" .Pages "current" nil) }}
+</nav>
 {{ end }}

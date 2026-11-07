@@ -1,0 +1,20 @@
+{{/* Posts grouped by year and month, with dotted leaders out to the day.
+     Context: dict "pages" (posts, newest first) "current" (page or nil). */}}
+{{ $current := .current }}
+{{ $lastYear := "" }}
+{{ range .pages.GroupByDate "2006-01" }}
+  {{ $first := index .Pages 0 }}
+  {{ $year := $first.Date.Format "2006" }}
+  <h3>
+    <span>{{ if ne $year $lastYear }}{{ $year }}{{ end }}</span>
+    <span>{{ $first.Date.Format "January" }}</span>
+  </h3>
+  {{ $lastYear = $year }}
+  {{ range .Pages }}
+  <a class="archive-item" href="{{ .RelPermalink }}"{{ if and $current (eq .RelPermalink $current.RelPermalink) }} aria-current="page"{{ end }}>
+    <span class="title">{{ .Title }}</span>
+    <span class="leader" aria-hidden="true"></span>
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ humanize (.Date.Format "2") }}</time>
+  </a>
+  {{ end }}
+{{ end }}

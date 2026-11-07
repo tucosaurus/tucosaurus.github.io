@@ -5,7 +5,7 @@
     {{ if $isPost }}
     <p class="eyebrow">
       <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
-      <span aria-hidden="true">·</span> {{ .ReadingTime }} min read
+      · {{ .ReadingTime }} min read
     </p>
     {{ end }}
     <h1>{{ .Title }}</h1>
@@ -18,10 +18,17 @@
 </article>
 
 {{ if $isPost }}
-<p class="fin" aria-hidden="true">✻</p>
-<nav class="post-nav">
-  {{ with .PrevInSection }}<a href="{{ .RelPermalink }}"><span>Older</span>{{ .Title }}</a>{{ else }}<span></span>{{ end }}
-  {{ with .NextInSection }}<a class="next" href="{{ .RelPermalink }}"><span>Newer</span>{{ .Title }}</a>{{ end }}
+<aside class="post-end">
+  <h2>What should you do next?</h2>
+  <p>
+    {{ with site.Params.email }}Share your thoughts via <a href="mailto:{{ . }}?subject={{ $.Title | urlquery }}">email</a>, or{{ else }}You can{{ end }}
+    follow along via <a href="{{ "index.xml" | relURL }}">RSS</a>{{ with site.Params.social }}{{ with index . 0 }} or find me on <a href="{{ .url }}">{{ .name }}</a>{{ end }}{{ end }}.
+  </p>
+</aside>
+
+<nav class="archive">
+  <h2>More writing</h2>
+  {{ partial "archive.html" (dict "pages" (first 12 .CurrentSection.Pages) "current" .) }}
 </nav>
 {{ end }}
 {{ end }}
