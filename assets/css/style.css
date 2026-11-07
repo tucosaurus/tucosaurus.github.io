@@ -13,7 +13,7 @@
   --brand-alt: #ffee50;
   --shadow: rgba(33, 35, 38, 0.1) 0 10px 10px -10px;
 
-  --serif: "Iowan Old Style", "Iowan", "Palatino Linotype", "URW Palladio L", P052, "Newsreader", Georgia, serif;
+  --serif: "Iowan Old Style", "Newsreader", Georgia, serif;
   --mono: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, monospace;
 
   --column: 36rem;
@@ -64,7 +64,7 @@ body {
 
 a { color: inherit; text-decoration: none; }
 
-.smallcaps, .site-header, .site-footer, .label, .eyebrow {
+.site-header, .site-footer, .eyebrow {
   font-variant-caps: all-small-caps;
   letter-spacing: 0.04em;
 }
@@ -99,17 +99,10 @@ a { color: inherit; text-decoration: none; }
 
 /* ── Shared text column ───────────────────────────────────────────── */
 
-.prose > *, .article-header, .intro, .columns, .now, .archive, .post-end {
+.prose > *, .article-header, .intro, .archive, .post-end {
   max-width: var(--column);
   margin-left: auto;
   margin-right: auto;
-}
-
-.label {
-  font-weight: 400;
-  font-size: 1rem;
-  color: var(--muted);
-  margin: 0 0 0.75rem;
 }
 
 /* ── Article header ───────────────────────────────────────────────── */
@@ -148,7 +141,7 @@ h1 {
 .prose strong { font-weight: 700; color: var(--strong); }
 
 /* Highlighter links: a two-tone yellow that slides on hover. */
-.prose :where(p, li, td, figcaption) a, .post-end a, .intro a, .now a {
+.prose :where(p, li, td, figcaption) a, .post-end a, .archive-more a {
   color: var(--strong);
   background-image: linear-gradient(to right, var(--brand), var(--brand-alt));
   background-repeat: no-repeat;
@@ -156,7 +149,7 @@ h1 {
   background-size: 300% 40%;
   transition: background-position .15s ease-out;
 }
-.prose :where(p, li, td, figcaption) a:hover, .post-end a:hover, .intro a:hover, .now a:hover {
+.prose :where(p, li, td, figcaption) a:hover, .post-end a:hover, .archive-more a:hover {
   background-position: 100% 100%;
 }
 
@@ -263,6 +256,8 @@ h1 {
 /* ── Archive list with dotted leaders (no dates; newest first) ─────────────────────────────── */
 
 .archive { margin-top: 4rem; }
+.archive-more { text-align: center; margin: 1.5rem 0 0; font-size: 0.86rem; font-style: italic; }
+.post-end + .archive, .archive + .post-end { margin-top: 4.5rem; }
 .archive > h2 {
   font-size: 1.15rem;
   font-weight: 700;
@@ -285,34 +280,14 @@ h1 {
 
 /* ── Home ─────────────────────────────────────────────────────────── */
 
-.intro { margin-bottom: 4rem; }
+.intro { margin-bottom: 3rem; }
 .intro p { margin: 0 0 0.9rem; }
 .intro em { color: var(--strong); }
 .prose.intro p + p { text-indent: 0; }
 
-.columns {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-}
-.columns ul { list-style: none; margin: 0; padding: 0; }
-.columns li { margin-bottom: 1.1rem; line-height: 1.6; }
-.columns li a {
-  color: var(--strong);
-  background-image: linear-gradient(to right, var(--brand), var(--brand-alt));
-  background-repeat: no-repeat;
-  background-position: 0% 100%;
-  background-size: 0% 40%;
-  transition: background-size .2s ease-out;
-}
-.columns li a:hover { background-size: 100% 40%; }
-.columns li span { display: block; font-size: 0.86rem; font-style: italic; color: var(--muted); }
 
-.now { margin-top: 3.5rem; }
-.now p { margin: 0 0 0.9rem; }
 
 @media (max-width: 40rem) {
   body { padding-top: 2.5rem; }
   .site-header { margin-bottom: 3.5rem; }
-  .columns { grid-template-columns: 1fr; gap: 1.5rem; }
-}
+  
