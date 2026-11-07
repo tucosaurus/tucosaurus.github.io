@@ -8,15 +8,20 @@ Personal site for tucosaurus.com: a blog, an About page, and an Interests page. 
 
 ## Commands
 
+Everything goes through the `Makefile` (run `make` for the list):
+
 ```sh
-brew install hugo                  # extended build; developed against v0.169
-hugo server -D                     # local preview incl. drafts at http://localhost:1313
-hugo new posts/my-post-slug.md     # new post from archetypes/posts.md (starts as draft: true)
-./deploy.sh --dry-run              # build and show what would change on gh-pages
-./deploy.sh                        # build, commit to gh-pages, push → live site
+make setup                     # install Hugo via Homebrew (developed against v0.169 extended)
+make serve                     # preview incl. drafts at http://localhost:1313
+make post title="My post"      # new draft at content/posts/my-post.md from archetypes/posts.md
+make drafts                    # list unpublished drafts
+make build                     # production build into ./public
+make check                     # dry-run deploy: build + diff against gh-pages, no push
+make deploy                    # requires clean tree; git push origin master, then ./deploy.sh
+make clean                     # remove public/, resources/
 ```
 
-There are no tests or linters. `hugo --minify` should finish with no WARN lines.
+There are no tests or linters. `make build` should finish with no WARN lines.
 
 ## Publishing model
 
