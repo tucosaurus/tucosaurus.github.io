@@ -92,9 +92,10 @@ a { color: inherit; text-decoration: none; }
   font-size: 0.95rem;
   color: var(--muted);
 }
+.site-footer nav { display: flex; flex-wrap: wrap; justify-content: center; row-gap: 0.15rem; }
 .site-footer nav a { color: var(--text); transition: opacity .15s; }
 .site-footer nav a:hover { opacity: .7; }
-.site-footer nav a:not(:last-child)::after { content: " — "; white-space: pre; opacity: .3; }
+.site-footer nav a:not(:last-child)::after { content: "—"; margin: 0 0.6em; opacity: .3; }
 .site-footer p { margin: 0.5rem 0 0; }
 
 /* ── Shared text column ───────────────────────────────────────────── */
@@ -290,4 +291,7 @@ h1 {
 @media (max-width: 40rem) {
   body { padding-top: 2.5rem; }
   .site-header { margin-bottom: 3.5rem; }
+  /* Footer links wrap onto centered lines; drop the dashes so no line ends on one. */
+  .site-footer nav { column-gap: 1.1rem; }
+  .site-footer nav a:not(:last-child)::after { content: none; }
   

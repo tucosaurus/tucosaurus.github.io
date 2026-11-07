@@ -1,6 +1,6 @@
 baseURL = "https://tucosaurus.com/"
 locale = "en-US"
-title = "tucosaurus's alcove"
+title = "tucosaurus"
 disableKinds = ["taxonomy", "term"]
 enableRobotsTXT = true
 
