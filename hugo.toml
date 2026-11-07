@@ -6,6 +6,9 @@ enableRobotsTXT = true
 
 [params]
   author = "Akash Mishra"
+  # Contact address. Rendered spam-resistantly (see layouts/_partials/email-link.html).
+  # A Namecheap "Redirect Email" alias that forwards to a personal inbox.
+  email = "hello@tucosaurus.com"
   description = "Writing, notes, and things I'm into."
 
   [[params.social]]
