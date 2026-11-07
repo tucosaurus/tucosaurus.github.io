@@ -3,10 +3,7 @@
 <article>
   <header class="article-header">
     {{ if $isPost }}
-    <p class="eyebrow">
-      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
-      · {{ .ReadingTime }} min read
-    </p>
+    <p class="eyebrow">{{ .ReadingTime }} min read</p>
     {{ end }}
     <h1>{{ .Title }}</h1>
     {{ with .Description }}<p class="dek">{{ . }}</p>{{ end }}

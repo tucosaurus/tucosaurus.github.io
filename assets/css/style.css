@@ -64,7 +64,7 @@ body {
 
 a { color: inherit; text-decoration: none; }
 
-.smallcaps, .site-header, .site-footer, .label, .eyebrow, .archive h3 {
+.smallcaps, .site-header, .site-footer, .label, .eyebrow {
   font-variant-caps: all-small-caps;
   letter-spacing: 0.04em;
 }
@@ -260,7 +260,7 @@ h1 {
   margin: 0;
 }
 
-/* ── Archive list with dotted leaders ─────────────────────────────── */
+/* ── Archive list with dotted leaders (no dates; newest first) ─────────────────────────────── */
 
 .archive { margin-top: 4rem; }
 .archive > h2 {
@@ -268,15 +268,7 @@ h1 {
   font-weight: 700;
   color: var(--strong);
   text-align: center;
-  margin: 0 0 1rem;
-}
-.archive h3 {
-  display: flex;
-  justify-content: space-between;
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--strong);
-  margin: 2rem 0 0.25rem;
+  margin: 0 0 1.25rem;
 }
 .archive-item {
   display: flex;
@@ -285,10 +277,10 @@ h1 {
   transition: gap .15s ease-out;
 }
 .archive-item:hover { gap: 0.9rem; }
-.archive-item:hover :is(.title, time) { color: var(--muted); }
+.archive-item:hover :is(.title, .meta) { color: var(--muted); }
 .archive-item .title { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; transition: color .15s; }
 .archive-item .leader { flex: 1 1 auto; min-width: 1.5rem; border-top: 1px dotted currentColor; opacity: .25; }
-.archive-item time { flex: none; font-variant-numeric: oldstyle-nums; transition: color .15s; }
+.archive-item .meta { flex: none; color: var(--muted); font-variant-numeric: oldstyle-nums; transition: color .15s; }
 .archive-item[aria-current="page"] .title { font-style: italic; }
 
 /* ── Home ─────────────────────────────────────────────────────────── */

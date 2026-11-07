@@ -11,7 +11,7 @@
       {{ range first 3 $posts }}
       <li>
         <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        <span>{{ with .Description }}{{ . }}{{ else }}{{ .Date.Format "January 2006" }}{{ end }}</span>
+        {{ with .Description }}<span>{{ . }}</span>{{ end }}
       </li>
       {{ end }}
       <li>
