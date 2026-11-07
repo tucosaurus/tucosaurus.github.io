@@ -1,6 +1,0 @@
-{{- /* Spam-resistant mailto link. The address never appears in the HTML:
-       it's base64-encoded in data-e and turned into a mailto only when a
-       person clicks. Context: dict "text" (link text) "subject" (optional). */ -}}
-{{- with site.Params.email -}}
-<a href="{{ "about/" | relURL }}" data-e="{{ . | base64Encode }}"{{ with $.subject }} data-s="{{ . }}"{{ end }}>{{ $.text | default "email" }}</a>
-{{- end -}}

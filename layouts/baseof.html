@@ -35,14 +35,5 @@
     </nav>
     <p>© {{ now.Year }} {{ site.Params.author }}</p>
   </footer>
-  <script>
-    document.addEventListener("click", function (e) {
-      var a = e.target.closest("a[data-e]");
-      if (!a) return;
-      e.preventDefault();
-      var s = a.getAttribute("data-s");
-      location.href = "mailto:" + atob(a.getAttribute("data-e")) + (s ? "?subject=" + encodeURIComponent(s) : "");
-    });
-  </script>
 </body>
 </html>
