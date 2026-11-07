@@ -33,7 +33,7 @@
       {{- range site.Params.social }}<a href="{{ .url }}">{{ .name }}</a>{{ end -}}
       <a href="{{ "index.xml" | relURL }}">RSS</a>
     </nav>
-    <p>© {{ now.Year }} {{ site.Params.author }}</p>
+    <p>© {{ site.Params.author }}</p>
   </footer>
   <script>
     document.addEventListener("click", function (e) {
