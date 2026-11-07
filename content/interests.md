@@ -5,10 +5,6 @@ build:
   list: never
 ---
 
-<!-- Placeholder copy: replace these with your actual interests. -->
-
-
-
 ## Building things
 
 - Product Engineering Org for Ecommerce at Brevo
@@ -19,8 +15,8 @@ build:
 
 - Deming's books
 - Theory of Constraints by Goldratt. I am reading through all his books at the moment.
-- commoncog forums
-- stratecherry
+- [Commoncog](https://commoncog.com) forums
+- [Stratechery](https://stratechery.com)
 
 ## Away from the screen
 

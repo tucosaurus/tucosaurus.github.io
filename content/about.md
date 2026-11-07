@@ -5,11 +5,9 @@ build:
   list: never
 ---
 
-<!-- Placeholder copy: rewrite in your own words. -->
-
 I'm Akash Mishra, a software engineer. I go by tucosaurus most places online.
 
-This site is where I try to publish all that I write. 
+This site is where I try to publish all that I write.
 
 ## Elsewhere
 
