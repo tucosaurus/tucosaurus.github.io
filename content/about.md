@@ -9,7 +9,7 @@ build:
 
 I'm Akash Mishra, a software engineer. I go by tucosaurus most places online.
 
-This site is where I write things down so I understand them better, and so I can find them again later.
+This site is where I try to publish all that I write. 
 
 ## Elsewhere
 

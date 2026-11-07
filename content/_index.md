@@ -4,4 +4,4 @@ now: |
   Placeholder: what you're working on, reading, or thinking about these days. A few sentences, updated whenever it changes.
 ---
 
-*Writing things down.* I'm a software engineer, and this is where I think out loud about building software, the things I'm learning, and whatever else won't leave me alone.
+*Always be learning* I'm a software engineer, and this is where I try to think out loud about building software, the things I'm learning, and whatever else is on top of my mind.
