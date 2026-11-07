@@ -1,0 +1,39 @@
+baseURL = "https://tucosaurus.com/"
+locale = "en-US"
+title = "tucosaurus's alcove"
+disableKinds = ["taxonomy", "term"]
+enableRobotsTXT = true
+
+[params]
+  author = "Akash Mishra"
+  description = "Writing, notes, and things I'm into."
+
+  [[params.social]]
+    name = "GitHub"
+    url = "https://github.com/tucosaurus"
+  [[params.social]]
+    name = "Twitter"
+    url = "https://twitter.com/tucosaurus"
+  [[params.social]]
+    name = "LinkedIn"
+    url = "https://www.linkedin.com/in/tucosaurus/"
+
+[menus]
+  [[menus.main]]
+    name = "Writing"
+    pageRef = "/posts"
+    weight = 1
+  [[menus.main]]
+    name = "About"
+    pageRef = "/about"
+    weight = 2
+  [[menus.main]]
+    name = "Interests"
+    pageRef = "/interests"
+    weight = 3
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+  [markup.goldmark.renderer]
+    unsafe = true

@@ -1,0 +1,14 @@
+{{ define "main" }}
+<section class="intro prose">
+  {{ .Content }}
+</section>
+
+{{ $posts := where site.RegularPages "Section" "posts" }}
+{{ with $posts }}
+<section>
+  <h2 class="section-label">Recent writing</h2>
+  {{ partial "post-list.html" (first 5 .) }}
+  {{ if gt (len .) 5 }}<p class="more"><a href="{{ "posts/" | relURL }}">All writing →</a></p>{{ end }}
+</section>
+{{ end }}
+{{ end }}
