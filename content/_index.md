@@ -1,7 +1,9 @@
 ---
 title: "Home"
+now: |
+  Placeholder: what you're working on, reading, or thinking about these days. A few sentences, updated whenever it changes.
 ---
 
-Hi, I'm Akash. This is my small corner of the internet, where I write about software, things I'm learning, and whatever else I can't stop thinking about.
+Akash Mishra
 
-More [about me](/about/), or what I'm [into lately](/interests/).
+*Writing things down.* I'm a software engineer, and this is where I think out loud about building software, the things I'm learning, and whatever else won't leave me alone.

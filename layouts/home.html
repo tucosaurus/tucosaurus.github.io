@@ -4,11 +4,54 @@
 </section>
 
 {{ $posts := where site.RegularPages "Section" "posts" }}
-{{ with $posts }}
-<section>
-  <h2 class="section-label">Recent writing</h2>
-  {{ partial "post-list.html" (first 5 .) }}
-  {{ if gt (len .) 5 }}<p class="more"><a href="{{ "posts/" | relURL }}">All writing →</a></p>{{ end }}
+<section class="columns">
+  <div class="column">
+    <h2 class="label">Writing</h2>
+    <ul>
+      {{ range first 3 $posts }}
+      <li>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        <span>{{ with .Description }}{{ . }}{{ else }}{{ .Date.Format "January 2006" }}{{ end }}</span>
+      </li>
+      {{ end }}
+      <li>
+        <a href="{{ "posts/" | relURL }}">All writing</a>
+        <span>Everything, newest first.</span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="column">
+    <h2 class="label">Around here</h2>
+    <ul>
+      {{ range slice "/about" "/interests" }}
+      {{ with site.GetPage . }}
+      <li>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        {{ with .Description }}<span>{{ . }}</span>{{ end }}
+      </li>
+      {{ end }}
+      {{ end }}
+    </ul>
+  </div>
+
+  <div class="column">
+    <h2 class="label">Elsewhere</h2>
+    <ul>
+      {{ range site.Params.social }}
+      <li>
+        <a href="{{ .url }}">{{ .name }}</a>
+        {{ with .note }}<span>{{ . }}</span>{{ end }}
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+</section>
+
+{{ with .Params.now }}
+<section class="now">
+  <h2 class="label">Now</h2>
+  <div class="prose">{{ . | markdownify }}</div>
 </section>
 {{ end }}
 {{ end }}

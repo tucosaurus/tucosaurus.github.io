@@ -1,4 +1,5 @@
 ---
+description: "Things I keep coming back to."
 title: "Interests"
 build:
   list: never
@@ -6,7 +7,7 @@ build:
 
 <!-- Placeholder copy: replace these with your actual interests. -->
 
-Things I keep coming back to.
+
 
 ## Building things
 

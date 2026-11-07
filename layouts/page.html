@@ -1,23 +1,27 @@
 {{ define "main" }}
+{{ $isPost := eq .Section "posts" }}
 <article>
   <header class="article-header">
-    <h1>{{ .Title }}</h1>
-    {{ if eq .Section "posts" }}
-    <p class="meta">
+    {{ if $isPost }}
+    <p class="eyebrow">
       <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
-      · {{ .ReadingTime }} min read
+      <span aria-hidden="true">·</span> {{ .ReadingTime }} min read
     </p>
     {{ end }}
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p class="dek">{{ . }}</p>{{ end }}
   </header>
-  <div class="prose">
+
+  <div class="prose{{ if .Params.dropcap }} dropcap{{ end }}">
     {{ .Content }}
   </div>
 </article>
 
-{{ if eq .Section "posts" }}
+{{ if $isPost }}
+<p class="fin" aria-hidden="true">✻</p>
 <nav class="post-nav">
-  {{ with .PrevInSection }}<a href="{{ .RelPermalink }}">← {{ .Title }}</a>{{ else }}<span></span>{{ end }}
-  {{ with .NextInSection }}<a href="{{ .RelPermalink }}">{{ .Title }} →</a>{{ end }}
+  {{ with .PrevInSection }}<a href="{{ .RelPermalink }}"><span>Older</span>{{ .Title }}</a>{{ else }}<span></span>{{ end }}
+  {{ with .NextInSection }}<a class="next" href="{{ .RelPermalink }}"><span>Newer</span>{{ .Title }}</a>{{ end }}
 </nav>
 {{ end }}
 {{ end }}

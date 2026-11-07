@@ -1,10 +1,13 @@
 {{ define "main" }}
-<h1>{{ .Title }}</h1>
+<header class="article-header">
+  <h1>{{ .Title }}</h1>
+  {{ with .Description }}<p class="dek">{{ . }}</p>{{ end }}
+</header>
 {{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
 
 {{ range .Pages.GroupByDate "2006" }}
 <section class="year">
-  <h2 class="section-label">{{ .Key }}</h2>
+  <h2 class="label">{{ .Key }}</h2>
   {{ partial "post-list.html" .Pages }}
 </section>
 {{ end }}

@@ -1,4 +1,5 @@
 ---
+description: "Who I am and what this place is."
 title: "About"
 build:
   list: never

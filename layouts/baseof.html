@@ -10,7 +10,7 @@
   {{ with site.Home.OutputFormats.Get "rss" }}<link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="{{ site.Title }}">{{ end }}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
   {{ with resources.Get "css/style.css" | minify | fingerprint }}<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">{{ end }}
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦖</text></svg>">
 </head>
@@ -28,8 +28,11 @@
     {{ block "main" . }}{{ end }}
   </main>
   <footer class="site-footer">
-    {{ range site.Params.social }}<a href="{{ .url }}">{{ .name }}</a>{{ end }}
-    <a href="{{ "index.xml" | relURL }}">RSS</a>
+    <span>© {{ now.Year }} {{ site.Params.author }}</span>
+    <span class="footer-links">
+      {{ range site.Params.social }}<a href="{{ .url }}">{{ .name }}</a>{{ end }}
+      <a href="{{ "index.xml" | relURL }}">RSS</a>
+    </span>
   </footer>
 </body>
 </html>
