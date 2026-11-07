@@ -1,0 +1,2 @@
+{{- /* In Markdown: {{< email >}} or {{< email "write to me" >}} */ -}}
+{{- partial "email-link.html" (dict "text" (.Get 0 | default "email")) -}}

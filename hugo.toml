@@ -6,6 +6,9 @@ enableRobotsTXT = true
 
 [params]
   author = "Akash Mishra"
+  # Contact address. Rendered spam-resistantly (see layouts/_partials/email-link.html).
+  # Use a forwarding alias you can retire, e.g. hello@tucosaurus.com.
+  # email = "hello@tucosaurus.com"
   description = "Writing, notes, and things I'm into."
 
   [[params.social]]
