@@ -1,16 +1,17 @@
 ---
-description: "Who I am and what this place is."
 title: "About"
 build:
   list: never
 ---
 
-I'm Akash Mishra, a software engineer. I go by tucosaurus most places online.
+I'm Akash Mishra, a software engineer and engineering manager with a soft spot for products. I was a product engineer long before AI made the term fashionable.
+
+These days I'm head of product engineering for the ecommerce business unit at [Brevo](https://www.brevo.com/), where I work on making marketing easier for ecommerce operators.
+
+I go by tucosaurus most places online.
 
 This site is where I try to publish all that I write.
 
-## Elsewhere
+## Colophon
 
-- [GitHub](https://github.com/tucosaurus)
-- [Twitter](https://twitter.com/tucosaurus)
-- [LinkedIn](https://www.linkedin.com/in/tucosaurus/)
+The design of this site is borrowed, with gratitude, from [Manuel Moreale](https://manuelmoreale.com/). If you like how it looks, go read the original.
