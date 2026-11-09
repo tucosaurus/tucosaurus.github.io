@@ -16,7 +16,7 @@
 </head>
 <body>
   <header class="site-header">
-    <a class="site-title" href="{{ "/" | relURL }}">{{ site.Title }}</a>
+    <a class="site-title" href="{{ "/" | relURL }}">{{ site.Params.author }}</a>
     <nav>
       {{ $current := . }}
       {{ range site.Menus.main }}
@@ -29,9 +29,7 @@
   </main>
   <footer class="site-footer">
     <nav>
-      {{- range site.Menus.main }}<a href="{{ .URL }}">{{ .Name }}</a>{{ end -}}
       {{- range site.Params.social }}<a href="{{ .url }}">{{ .name }}</a>{{ end -}}
-      <a href="{{ "index.xml" | relURL }}">RSS</a>
     </nav>
     <p>© {{ site.Params.author }}</p>
   </footer>

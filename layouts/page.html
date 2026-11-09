@@ -18,8 +18,9 @@
 <aside class="post-end">
   <h2>What should you do next?</h2>
   <p>
-    {{ if site.Params.email }}Share your thoughts via {{ partial "email-link.html" (dict "text" "email" "subject" (printf "Re: %s" $.Title)) }}, or{{ else }}You can{{ end }}
-    follow along via <a href="{{ "index.xml" | relURL }}">RSS</a>{{ with site.Params.social }}{{ with index . 0 }} or find me on <a href="{{ .url }}">{{ .name }}</a>{{ end }}{{ end }}.
+    {{ $social := index (site.Params.social | default slice) 0 }}
+    {{ if site.Params.email }}Share your thoughts via {{ partial "email-link.html" (dict "text" "email" "subject" (printf "Re: %s" $.Title)) }}{{ with $social }}, or find me on <a href="{{ .url }}">{{ .name }}</a>{{ end }}.
+    {{ else }}{{ with $social }}You can find me on <a href="{{ .url }}">{{ .name }}</a>.{{ end }}{{ end }}
   </p>
 </aside>
 
