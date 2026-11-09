@@ -7,9 +7,9 @@ build:
 
 ## Building things
 
+- Making Brevo better for ecommerce operators
 - Product Engineering Org for Ecommerce at Brevo
-- Harness to make engineers more productive
-- Product agent to go through all Pirate metrics
+- Harness to make engineers more productive in a 1000+ repository system
 
 ## Reading
 
