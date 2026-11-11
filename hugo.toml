@@ -34,6 +34,10 @@ enableRobotsTXT = true
     name = "Interests"
     pageRef = "/interests"
     weight = 3
+  [[menus.main]]
+    name = "Reading"
+    pageRef = "/reading"
+    weight = 4
 
 [markup]
   [markup.highlight]
