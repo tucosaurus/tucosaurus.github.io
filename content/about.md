@@ -10,8 +10,6 @@ These days I'm head of product engineering for the ecommerce business unit at [B
 
 I go by tucosaurus most places online.
 
-This site is where I try to publish all that I write.
-
 ## Colophon
 
 The design of this site is borrowed, with gratitude, from [Manuel Moreale](https://manuelmoreale.com/). If you like how it looks, go read the original.
