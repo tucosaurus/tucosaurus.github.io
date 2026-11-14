@@ -7,8 +7,16 @@ build:
 
 ## Building things
 
+### Personal
+
+- Building sites for friends and family running small businesses in India. Recent: [Mfosys](https://mfosys.in) and [Gunjan Dewan](https://gunjandewan.com)
+- A mobile app for making AI stories and variations of a song for my kid
+- Visualisers for Goldratt's thinking tools (current reality trees, evaporating clouds)
+
+### Professional
+
 - Making Brevo better for ecommerce operators
-- Product Engineering Org for Ecommerce at Brevo
+- Building the product engineering org for ecommerce at Brevo
 - Harness to make engineers more productive in a 1000+ repository system
 
 ## Away from the screen
@@ -16,5 +24,5 @@ build:
 - Spending time with my kid
 - Trying to do zone 2 runs
 - Cycling
-- Swimming. Quite enamored with open sea swimming at the moment.
+- Swimming: quite enamored with open sea swimming at the moment
 - [Reading](/reading/)

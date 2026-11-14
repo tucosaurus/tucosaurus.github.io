@@ -19,8 +19,8 @@
   <h2>What should you do next?</h2>
   <p>
     {{ $social := index (site.Params.social | default slice) 0 }}
-    {{ if site.Params.email }}Share your thoughts via {{ partial "email-link.html" (dict "text" "email" "subject" (printf "Re: %s" $.Title)) }}{{ with $social }}, or find me on <a href="{{ .url }}">{{ .name }}</a>{{ end }}.
-    {{ else }}{{ with $social }}You can find me on <a href="{{ .url }}">{{ .name }}</a>.{{ end }}{{ end }}
+    {{ if site.Params.email }}Share your thoughts via {{ partial "email-link.html" (dict "text" "email" "subject" (printf "Re: %s" $.Title)) }}{{ with $social }}, or find me on <a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>{{ end }}.
+    {{ else }}{{ with $social }}You can find me on <a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>.{{ end }}{{ end }}
   </p>
 </aside>
 

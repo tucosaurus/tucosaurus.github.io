@@ -1,0 +1,9 @@
+{{- /* External links (http/https) open in a new tab; internal links stay in place. */ -}}
+{{- $u := urls.Parse .Destination -}}
+{{- $external := in (slice "http" "https") $u.Scheme -}}
+<a href="{{ .Destination | safeURL }}"
+  {{- with .Title }} title="{{ . }}"{{ end }}
+  {{- if $external }} target="_blank" rel="noopener"{{ end }}>
+  {{- .Text -}}
+</a>
+{{- /* chomp trailing newline */ -}}

@@ -4,7 +4,7 @@ build:
   list: never
 ---
 
-I'm Akash Mishra, a software engineer and engineering manager with a soft spot for products. I was a product engineer long before AI made the term fashionable.
+I'm Akash Mishra, a software engineer and an engineering manager with a soft spot for products. I was a product engineer long before AI made the term fashionable.
 
 These days I'm head of product engineering for the ecommerce business unit at [Brevo](https://www.brevo.com/), where I work on making marketing easier for ecommerce operators.
 
