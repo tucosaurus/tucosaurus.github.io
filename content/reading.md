@@ -16,6 +16,7 @@ Couple of books I've read and online writing I have on my bookmarks. I haven't t
 - The Fountainhead by Ayn Rand
 - Atlas Shrugged by Ayn Rand
 - The Discovery of the Child by Maria Montessori
+- Eleven Rings by Phil Jackson
 
 ## Books
 
@@ -27,6 +28,12 @@ Couple of books I've read and online writing I have on my bookmarks. I haven't t
 - Tape Sucks by Frank Slootman
 - The Joyful Child: Montessori, Global Wisdom for Birth to Three
 - Management 3.0 by Jurgen Appelo
+- Hooked by Nir Eyal
+- Alchemy by Rory Sutherland
+- The Soul of a New Machine by Tracy Kidder
+- 7 Powers by Hamilton Helmer
+- Designing Data Intensive Applications by Martin Kleppman
+- Let My People Go Surfing by Yvon Chouinard
 
 ## Online
 

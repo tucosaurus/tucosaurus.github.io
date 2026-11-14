@@ -25,19 +25,19 @@ enableRobotsTXT = true
   [[menus.main]]
     name = "Writing"
     pageRef = "/posts"
-    weight = 1
+    weight = 4
   [[menus.main]]
     name = "About"
     pageRef = "/about"
-    weight = 2
+    weight = 1
   [[menus.main]]
     name = "Interests"
     pageRef = "/interests"
-    weight = 3
+    weight = 2
   [[menus.main]]
     name = "Reading"
     pageRef = "/reading"
-    weight = 4
+    weight = 3
 
 [markup]
   [markup.highlight]
